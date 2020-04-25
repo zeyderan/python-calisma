@@ -21,9 +21,23 @@ result = sorted(names)
 # 8- years listesini rakamsal büyüklüğe göre sıralayınız
 result = sorted(years)
 # 9- str = 'Chevrolet,Dacia' karakter dizisini listeye çevirin
+result = 'Chevrolet,Dacia'.split(',')
+
 # 10- years dizisinin en büyük ve en küçük elemanı nedir
+enkucuk = sorted(years)[0]
+enbuyuk = sorted(years)[len(years)-1]
+
+result = f'years dizisinin en büyük elemnı {enbuyuk} ve en küçük elemanı {enkucuk}'
+
 # 11- years dizisinde kaç tane 1998 değeri vardır
+result = years.count(1998)
+
 # 12- years dizisinin tüm elemanlarını silin
-# 13- Kullanıcıdan alacağınız 3 tae marka bilgisini bir listede saklayınız
- 
+years = []
+result = years
+# 13- Kullanıcıdan alacağınız 3 tane marka bilgisini bir listede saklayınız
+marka1 = input('Marka girin : ')
+marka2 = input('Marka girin : ')
+marka3 = input('Marka girin : ')
+result = [marka1,marka2,marka3]
 print(result)

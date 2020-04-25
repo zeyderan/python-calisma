@@ -43,5 +43,5 @@ result = 'Hello World'.replace('World','I here')
 
 # 11- 'course' karakter dizisini boşluk karakterlerinden ayırın
 result = course.split(' ')
-
+result = course.split(' ')[3]
 print(result)

@@ -12,7 +12,7 @@ import random
 hak = int(input('maksimum kaç tahminde bulunacağınızı girin : ')) # max tahmin sayısı
 
 aklimda = random.randint(1,100) # bulunacak sayı random
-print(aklimda)
+#print(aklimda)
 tahmin = 0 # tahmin değişkeni
 tahminSayisi = 0 # kullanıcı o ana kadar kaç tahminde bulundu
 while tahmin != aklimda: # tahmin doğruysa döngüden çıkar

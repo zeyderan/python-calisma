@@ -1,13 +1,13 @@
-import mod
+import modi
 
-#result = help(mod)
+#result = help(modi)
 
-result = mod.number
-result = mod.numbers
-result = mod.person['name']
-result = mod.func(5)
+result = modi.number
+result = modi.numbers
+result = modi.person['name']
+result = modi.func(5)
 
-p = mod.Person()
+p = modi.Person()
 
 p.speak()
 print(result)

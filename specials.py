@@ -18,6 +18,8 @@ class Movie():
     def __del__(self):
         print('film silindi')
 
+
 m = Movie('film adı','yönetmen adı',120)
 print(m)
 print(len(m))
+m.title='deneme'

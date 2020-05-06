@@ -16,7 +16,7 @@
 # file.write('\nbu yazı "a" modu ile eklendi')
 # file.close()
 
-#dosya önceden varsa hata verir
+# dosya önceden varsa hata verir
 # file = open('newfile.txt','x',encoding='utf-8')
 # file.write('\nbu yazı "x" modu ile eklendi')
 # file.close()

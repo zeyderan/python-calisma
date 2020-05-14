@@ -22,7 +22,7 @@ person_string = '{"name":"Ali","languages":["python","C#"]}'
 # # Dict to Json String
 person_dict = {
     "name": "Aykut",
-    'languages': ["Python","C#"]
+    "languages": ["Python","C#"]
 }
 
 # result = json.dumps(person_dict)

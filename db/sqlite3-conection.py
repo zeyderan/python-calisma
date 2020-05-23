@@ -1,10 +1,12 @@
 import sqlite3 as db
 
-mydb = db.connect(':memory:') # in memory db kod çalışınca var olur kod son bulunca hafızadan silinir
+#mydb = db.connect(':memory:') # in memory db kod çalışınca var olur kod son bulunca hafızadan silinir
+
+mydb = db.connect('test.sqlite')
 my_cursor = mydb.cursor() # imleç
 
 # yeni bir tablo oluştur
-my_cursor.execute('''\ 
+my_cursor.execute('''\
                 CREATE TABLE isim_soyisim (isim, soyisim)\
 ''')
 # işlemi uygula (her seferinde commit etmeye gerek yok)
@@ -23,3 +25,4 @@ data = my_cursor.execute('''\
 ''').fetchall()
 
 print(data)
+

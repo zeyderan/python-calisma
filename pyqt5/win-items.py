@@ -1,8 +1,6 @@
 import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
-import schedule
-import time
 
 # main window için tanımlanan fonksiyon
 def window():
@@ -22,6 +20,28 @@ def window():
     lbl_name = QtWidgets.QLabel(win)
     lbl_name.setText('Adınız: ')
     lbl_name.move(50,30)
+
+    #label eklendi ve pencere içine konumlandırıldı
+    lbl_surname = QtWidgets.QLabel(win)
+    lbl_surname.setText('Soyadınız: ')
+    lbl_surname.move(50,70)
+
+    #label eklendi ve pencere içine konumlandırıldı
+    lbl_tel = QtWidgets.QLabel(win)
+    lbl_tel.setText('Telefon: ')
+    lbl_tel.move(50,110)
+
+
+    #text box ekleme işlemi
+    txt_name = QtWidgets.QLineEdit(win)
+    txt_name.move(150,30)
+
+    txt_surname = QtWidgets.QLineEdit(win)
+    txt_surname.move(150,70)
+
+    txt_tel = QtWidgets.QLineEdit(win)
+    txt_tel.move(150,110)
+    txt_tel.setInputMask("\+\9\\0 (599) 999 99 99")
 
     #pencereyi gösterir
     win.show()

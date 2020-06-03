@@ -2,6 +2,8 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
+
+
 # main window için tanımlanan fonksiyon
 def window():
     # komut satırından argüman almak için Qapplication kullanılır
@@ -16,6 +18,7 @@ def window():
     # pencere konumu ve boyutu
     win.setGeometry(400,200,500,500)
 
+ 
     #label eklendi ve pencere içine konumlandırıldı
     lbl_name = QtWidgets.QLabel(win)
     lbl_name.setText('Adınız: ')
@@ -39,9 +42,19 @@ def window():
     txt_surname = QtWidgets.QLineEdit(win)
     txt_surname.move(150,70)
 
-    txt_tel = QtWidgets.QLineEdit(win)
-    txt_tel.move(150,110)
-    txt_tel.setInputMask("\+\9\\0 (599) 999 99 99")
+    #clicked slot.
+    def clicked(self):
+        print('butona tıklandı ' + txt_name.text()+ ' '+ txt_surname.text())
+
+    # buton eklendi
+    btn_save = QtWidgets.QPushButton(win)
+    #buton üzerindeki yazı
+    btn_save.setText('Kaydet')
+    #butonun pencere içindeki konumu
+    btn_save.move(150,110)
+
+    #butonunun clicked sinyali ile clicked slotu bağlandı.
+    btn_save.clicked.connect(clicked)
 
     #pencereyi gösterir
     win.show()

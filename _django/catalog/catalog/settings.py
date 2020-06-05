@@ -118,4 +118,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# static dosyalar her app için kendi altındaki /static klasöründe aransın
 STATIC_URL = '/static/'
+
+# yukarda bulamazsa
+# statik dosyalar root dizin altında static klasörü içerisinde aransın
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]

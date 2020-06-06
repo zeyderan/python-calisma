@@ -1,8 +1,125 @@
-<!--layout.html sayfasını miras alır ve aşağıda tanımlı 
+<!--layout.html sayfasını miras alır ve aşağıda tanımlı
     block content içerisindeki bilgisi layout.html ile birleştirip render a verir -->
-
 {% extends 'layout.html' %}
+
+<!-- static dosyaları eklemek için -->
+{% load static%}
 <!-- layout içerisinde yerleştirilecek block -->
 {% block content %}
-    <h1>index htm</h1>
+<!-- ana div -->
+    <div class="row">
+        <!-- 12 kolonlu grid için div -->
+        <div class="col-md-12">
+            <!-- 3 kolonluk yer tutacak card -->
+           <div class="card mb-3">
+               <!-- card içi satır -->
+               <div class="row">
+                   <!-- cart içi satırda 3 kolonluk yer tutacak div -->
+                <div class="col-md-3">
+                    <!-- card içi resim dosyası -->
+                    <img class="card-img" src="{% static 'img/1.jpg' %}" alt="" class="">
+                </div>
+                <!-- kalan 9 kolonu dolduracak div -->
+                <div class="col-md-9">
+                    <!-- card body içeriğini tutacak div -->
+                    <div class="card-body">
+                        <!-- card başlığı div -->
+                        <div class="card-title">High  Life</div>
+                        <!-- card text div -->
+                        <p class="card-text">
+                            lorem ipsum dolor amed
+                        </p>
+                        <!-- extra card text -->
+                        <p class="card-text">
+                            <!-- küçük ve silik halde yazılacak yazı paylaşım süresini basar -->
+                            <small class="text-muted">
+                                3 days ago
+                            </small>
+                        </p>
+                    </div>
+                </div>
+               </div>
+           </div>
+           <div class="card mb-3">
+            <div class="row">
+             <div class="col-md-3">
+                 <img class="card-img" src="{% static 'img/2.jpg' %}" alt="" class="">
+             </div>
+             <div class="col-md-9">
+                 <div class="card-body">
+                     <div class="card-title">High  Life</div>
+                     <p class="card-text">
+                         lorem ipsum dolor amed
+                     </p>
+                     <p class="card-text">
+                         <small class="text-muted">
+                             3 days ago
+                         </small>
+                     </p>
+                 </div>
+             </div>
+            </div>
+           </div>
+            <div class="card mb-3">
+            <div class="row">
+             <div class="col-md-3">
+                 <img class="card-img" src="{% static 'img/3.jpg' %}" alt="" class="">
+             </div>
+             <div class="col-md-9">
+                 <div class="card-body">
+                     <div class="card-title">High  Life</div>
+                     <p class="card-text">
+                         lorem ipsum dolor amed
+                     </p>
+                     <p class="card-text">
+                         <small class="text-muted">
+                             3 days ago
+                         </small>
+                     </p>
+                 </div>
+             </div>
+            </div>
+            </div>
+            <div class="card mb-3">
+            <div class="row">
+             <div class="col-md-3">
+                 <img class="card-img" src="{% static 'img/4.jpg' %}" alt="" class="">
+             </div>
+             <div class="col-md-9">
+                 <div class="card-body">
+                     <div class="card-title">High  Life</div>
+                     <p class="card-text">
+                         lorem ipsum dolor amed
+                     </p>
+                     <p class="card-text">
+                         <small class="text-muted">
+                             3 days ago
+                         </small>
+                     </p>
+                 </div>
+             </div>
+            </div>
+            </div>
+            <div class="card mb-3">
+            <div class="row">
+             <div class="col-md-3">
+                 <img class="card-img" src="{% static 'img/5.jpg' %}" alt="" class="">
+             </div>
+             <div class="col-md-9">
+                 <div class="card-body">
+                     <div class="card-title">High  Life</div>
+                     <p class="card-text">
+                         lorem ipsum dolor amed
+                     </p>
+                     <p class="card-text">
+                         <small class="text-muted">
+                             3 days ago
+                         </small>
+                     </p>
+                 </div>
+             </div>
+            </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

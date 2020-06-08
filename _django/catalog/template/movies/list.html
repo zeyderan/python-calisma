@@ -1,8 +1,55 @@
 <!--layout.html sayfasını miras alır ve aşağıda tanımlı 
     block content içerisindeki bilgisi layout.html ile birleştirip render a verir -->
     {% extends 'layout.html' %}
-
+    {% load static%}
+    {% load humanize%}
     <!-- layout içerisinde yerleştirilecek block -->
     {% block content %}
-        <h1>list htm</h1>
+        <h1>Movie List</h1>
+        <div class="row">
+            <!-- 12 kolonlu grid için div -->
+            <div class="col-md-12">
+                {% if movies %}
+                    {% for movie in movies %}
+                        <div class="card mb-3">
+                    <!-- card içi satır -->
+                    <div class="row">
+                        <!-- cart içi satırda 3 kolonluk yer tutacak div -->
+                     <div class="col-md-3">
+                         <!-- card içi resim dosyası -->
+                         <img class="card-img" src="{% static movie.get_movie_image_path %}" alt="" class="">
+                     </div>
+                     <!-- kalan 9 kolonu dolduracak div -->
+                     <div class="col-md-9">
+                         <!-- card body içeriğini tutacak div -->
+                         <div class="card-body">
+                             <!-- card başlığı div -->
+                             <div class="card-title">
+                                 <!-- movie_id değişkenine id bilgisinin aktarır -->
+                                 <a href="{% url 'detail' movie.id%}">{{movie.name}}</a></div>
+                             <!-- card text div -->
+                             <p class="card-text">
+                                {{movie.description}}
+                             </p>
+                             <!-- extra card text -->
+                             <p class="card-text">
+                                 <!-- küçük ve silik halde yazılacak yazı paylaşım süresini basar -->
+                                 <small class="text-muted">
+                                    {{movie.created_date | timesince}}
+                                 </small>
+                             </p>
+                         </div>
+                     </div>
+                    </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                <div class="alert-warning">
+                    No Movies
+                </div>
+                {% endif %}
+                <!-- 3 kolonluk yer tutacak card -->
+               
+            </div>
+        </div>
     {% endblock %}

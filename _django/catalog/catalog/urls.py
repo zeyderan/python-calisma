@@ -19,5 +19,6 @@ from django.urls import path, include
 # pages app urls.py içerisinde oluşturduğumuz url yapısını root urls.py içerisindeki url yapısına include(dahil) ediyoruz
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('pages.urls'))
+    path('',include('pages.urls')),
+    path('movies',include('movies.urls'))
 ]

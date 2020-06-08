@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',# eklediğimiz uygulamaları mutlaka installed apps içerisine eklemeliyiz
+    'movies',# eklediğimiz uygulamaları mutlaka installed apps içerisine eklemeliyiz
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -106,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'tr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EUROPE/ISTANBUL'
 
 USE_I18N = True
 

@@ -32,14 +32,15 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',# eklediğimiz uygulamaları mutlaka installed apps içerisine eklemeliyiz
-    'movies',# eklediğimiz uygulamaları mutlaka installed apps içerisine eklemeliyiz
+    'movies.apps.MoviesConfig',# eklediğimiz uygulamaları mutlaka installed apps içerisine eklemeliyiz
+    'user.apps.UserConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.humanize',
+    'django.contrib.humanize',#bu sonradan eklendi
 ]
 
 MIDDLEWARE = [
